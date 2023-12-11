@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="CUsersvishnDesktop18.02.28.jpg" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            color: rgb(213, 213, 255);
+            font-family: 'Poppins', sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(17, 17, 107);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 19px;
+        }
+        nav ul a{
+            font-weight: bold;
+            text-decoration: none;
+            color: rgb(213, 213, 255);
+        }
+        nav ul a:hover{
+            color: rgb(190, 177, 177);
+            font-size: 1.1rem;
+        }
+        main hr {
+            border: 0;
+            background: blue;
+            height: 1.2px;
+            margin: 45px 85px;
+        }
+        .left{
+            font-size: 1.6rem;
+        }
+        .firstsection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 83.5px 0;
+        }
+        .firstsection > div{
+            width: 30%;
+        }
+        .leftsection{
+            background-color: rgb(7, 0, 7);
+            font-size: 1.6rem;
+            font-style: italic;
+            font-weight: bold;
+        }
+        .leftsection .buttons{
+            padding: 18px;
+            margin-left: -14px;
+        }
+        .leftsection .btn {
+            padding: 12px;
+            background: rgba(16, 16, 154, 0.729);
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .rightsection img{
+            width: 80%;
+            box-shadow: 0px 0px 40px;
+            border-radius: 80px;
+        }
+        .rightsection img:hover{
+            transition-property: all;
+            transition-duration: 0.6s;
+            transition-timing-function: linear;
+            transition-delay: 0s;
+        }
+        .rightsection:hover{
+            transform: scale(1.05);
+        }
+        .rightsection .overlay{
+            background-color: rgb(145, 137, 137);
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;
+            transition-delay: 0s;
+            opacity: 0;
+        }
+        .rightsection:hover .overlay{
+            opacity: 1;
+        }
+        .purple{
+            color: rgb(174, 29, 174);
+        }
+        .red{
+            color: red;
+        }
+        .cyan{
+            color: rgb(34, 197, 34);
+        }
+        .text-gray{
+            color: white;
+            font-weight: bold;
+        }
+        #element{
+            color: yellow;
+        }
+        .secondsection{
+            max-width: 80vw;
+            height: 100vh;
+            margin: auto;
+        }
+        .secondsection h1{
+            font-size: 2.01rem;
+            font-weight: bold;
+            color: rgb(157, 145, 145);
+        }
+        .secondsection .box {
+            background: white;
+            width: 70vw;
+            height: 1px;
+            margin: 122px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .secondsection .vertical{
+            height: 90px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+        #image-top{
+            width: 35px;
+            position: relative;
+            top: -41px;
+            left: -17px;
+        }
+        .vertical-title{
+            position: relative;
+            top: 50px;
+            width: 150px;
+            font-weight: bold;
+            color: khaki;
+        }
+        .vertical-desc{
+            position: relative;
+            top: 65px;
+            color: gray;
+            width: 150px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+        footer{
+            background-color: rgb(9, 9, 35);
+            margin-top: -220px;
+        }
+        .footer{
+            display: flex;
+            padding: 60px 110px;
+            justify-content: space-evenly;
+            text-align: center;
+            margin-top: 280px;
+            column-gap: 10px;
+            overflow: hidden;
+        }
+        .footer-first h3{
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-style: italic;
+            color: #21D4FD;
+        }
+        .footer-first #logo{
+            width: 40px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 10px;
+        }
+        .footer ul{
+            list-style: none;
+            font-weight: bold;
+        }
+        .footer > div{
+            width: 100px;
+        }
+        .footer-second{
+            width: fit-content;
+        }
+        footer #textfooter{
+            text-align: center;
+            align-items: center;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            padding: 5px 0;
+            font-weight: bold;
+            font-style: italic;
+            color: black;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        .thirdsection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            margin-top: -300px;
+            margin-bottom: -30px; 
+        }
+        .textqualification{
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: red;
+            align-items: center;
+            text-align: center;
+            margin-top: -400px;
+            margin-bottom: -500px;
+            gap: 15px;
+        }
+        .textqualification p{
+            color: rgb(198, 198, 255);
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .buttons a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <nav>
+            <div class="left">
+                <marquee direction="left">
+                    < Vishnu Kumar's Portfolio />
+                </marquee>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="file:///C:/Users/vishn/Desktop/CssCardProjects3.html">Home</a></li>
+                    <li><a href="https://sites.google.com/view/webdevelopmentcource/home">About</a></li>
+                    <li><a href="file:///C:/Users/vishn/Desktop/CssCardproject1.html">Services</a></li>
+                    <li><a href="file:///C:/Users/vishn/Desktop/index%20(2).html">Projects</a></li>
+                    <li><a href="file:///C:/Users/vishn/Desktop/csscardproject2.html">Contact Us</a></li>
+                </ul>
+            </div>
+         </nav>
+    </header>
+    <!-- MAIN LINE FOR PORTFOLIO -->
+    <main>
+        <!-- <div class="clock">
+            <div class="time" id="time">
+                </div>
+        </div> -->
+        <section class="firstsection">
+            <div class="leftsection">
+                Hey Guy's ...
+                <div>
+                    My Name Is <span class="purple">Vishnu Kumar,</span>
+                </div>
+                <!-- <span class="red">*Web Developer* !!!</span> -->
+                <div>
+                    I'm A Passionate <span class="red">Full-Stack *Web Developer*,</span>
+                </div>
+                <div>At @ <span class="cyan">*Microsoft*</span> In Bangalore, India ...</div>
+                <div>
+                    I Have Joined <span class="cyan">( Microsoft )</span> July ( 2021-Present ) ...
+                </div>
+                      <!-- Element to contain animated typing -->
+                      <span id="element"></span>
+                    <div class="buttons">
+                        <!-- <marquee> -->
+                            <button class="btn">
+                                <a href="file:///C:/Users/vishn/Desktop/index%20(2).html">Download Resume</a>
+                            </button>
+                            <button class="btn">
+                                <a href="https://sites.google.com/view/webdevelopmentcource/home">Visit Github</a>
+                            </button>
+                        <!-- </marquee> -->
+                    </div>
+            </div>
+            <div class="rightsection">
+                <img src="CUsersvishnDesktop18.02.28.jpg">
+            </div>
+        </section>
+    <!-- SECOND SECTION ABOUT US -->
+<hr>
+        <section class="secondsection">
+            <span class="text-gray">What I Have So Far ?</span>
+            <h1>**Work Experience**</h1>
+    <!-- CREATING MULTIPLE BOXE'S FOR WORK EXPERIENCE ... -->
+            <div class="box">
+                <div class="vertical">
+                    <img id="image-top" src="CUsersvishnDesktop7733.webp"/>
+                    <div class="vertical-title">
+                        <marquee direction="left">
+                            Html & Css Developer ( 2010-2012 )
+                        </marquee>
+                    </div>
+                <div class="vertical-desc">
+                        I have worked in @ Instagram As a Full-Stack Developer.
+                        Since from 2010-12 I have also mention the date in my 
+                        resume/portfolio ... for any query you can, mail or contact me;
+                        & My Experience In Instagram Like Boom.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img id="image-top" src="CUsersvishnDesktopt.jpg"/>
+                    <div class="vertical-title">
+                        <marquee direction="left">
+                            .Node Js Developer ( 2012-2014 )
+                        </marquee>
+                    </div>
+                <div class="vertical-desc">
+                    There was a lot of effort In work as a back-end Developer *side/server*,
+                    Yes I'm talking about me only; I have worked In @ Swiggy;
+                    as a Back-End Developer,
+                    But Literally My Experience was quite good & I love It !!!
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img id="image-top" src="CUsersvishnDesktop123645.webp"/>
+                    <div class="vertical-title">
+                        <marquee direction="left">
+                            Software/C++ Tester ( 2014-2016 )
+                        </marquee>
+                    </div>
+                <div class="vertical-desc">
+                    After Completing My *BCA + MCA* Of 5:yearsI glad an Opportunity,
+                    to work with My one of the Most Favourite/dream company *Facebook*;
+                    I go/Worked In Facebook as a Software Tester Profile, &
+                    My Experience Was preety good !
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img id="image-top" src="CUsersvishnDesktop15411.jpg"/>
+                    <div class="vertical-title">
+                        <marquee direction="left">
+                            Back-End Developer ( 2016-2018 )
+                        </marquee>
+                    </div>
+                <div class="vertical-desc">
+                        Now, I'M talking about Back-End Profile,
+                        After Done MCA I glad an Opportunity to work with Big Brand,
+                        _Twitter_ & I tell you guys My Experience Is always on Hike
+                        To work With Twitter On Server Side;
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img id="image-top" src="CUsersvishnDesktopTelegram_2019_Logo.svg.png"/>
+                    <div class="vertical-title">
+                        <marquee direction="left">
+                            Software Engineer @ Telegram ( 2018-2020 )
+                        </marquee>
+                    </div>
+                <div class="vertical-desc">
+                    Let's Talk about Guy's Now Software Engineer.
+                    & firstfall thank you *telegram*; to pick me from,
+                    on campus, Literally Guy's I Get an Opportunity to Work
+                    with telegram! as a Software Engineer Profile, 
+                    I lOVE IT !
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img id="image-top" src="CUsersvishnDesktop4564.jpg"/>
+                    <div class="vertical-title">
+                        <marquee direction="left">
+                            React Developer @ whatshapp ( 2020-2022 )
+                        </marquee>
+                    </div>
+                <div class="vertical-desc">
+                    Guy's This is my Favourite profile to work with whatshapp,
+                    I applied off campus & I clear the interview & Hired ...
+                    I get an Opportunity To work with whatshapp as a *React Developer* Profile;
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- SECTION FOR ABOUT ME:- -->
+    <main>
+        <section class="thirdsection">
+                <span class="textqualification">
+                    <fieldset>
+                        <legend>
+                            <marquee direction="left">
+                                < My Degree & Qualification />
+                            </marquee>
+                        </legend>
+                            <p>
+                                <!-- <marquee> -->
+                                ( Bachlor's Of Computer Application ) *BCA* &<br/>
+                                ( Master's Of Computer Application )  *MCA*,<br/>
+                                *B.C.A + M.C.A Of - 5 Years Duration*<br/>
+                                From Lovely Professional University **LPU**,<br/>
+                                Army Public School ( A.P.S ) Senior Secondary School, From Dehradun, Uttrakhand !<br/>
+                                <!-- </marquee> -->
+                            </p>
+                        </fieldset>                             
+                </span>
+        </section>
+    </main>
+<!-- <FOOTER SECTION OF PORTFOLIO/> -->
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <marquee direction="up">
+                    <h3>Vishnu Developer's Portfolio</h3>
+                </marquee>
+                <img id="logo" src="CUsersvishnDesktop18.02.28.jpg">
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Services</li>
+                    <li>Press Releases</li>
+                    <li>Get to Know Us</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Let Us Help</li>
+                    <li>COVID-19</li>
+                    <li>Your Account</li>
+                    <li>Returns Centre</li>
+                    <li>100%Protection</li>
+                    <li>Upload Resume</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Make Money</li>
+                    <li>Sell Accelerator</li>
+                    <li>Build Your Brand</li>
+                    <li>Global Selling</li>
+                    <li>Affiliate</li>
+                    <li>Fulfilment/Github</li>
+                    <li>Merchants</li>
+                </ul>
+            </div>
+            <div class="footer-fifth">
+                <ul>
+                    <li>
+                        *Connect with Us*
+                    </li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Linked In</li>
+                    <li>Youtube</li>
+                    <li>Email Us</li>
+                </ul>
+            </div>
+            <div class="footer-sixth">
+                <ul>
+                    <li>Directories</li>
+                    <li>Members</li>
+                    <li>Jobs</li>
+                    <li>Companies</li>
+                    <li>Featured</li>
+                    <li>Learning</li>
+                    <li>Posts</li>
+                    <li>Articles</li>
+                    <li>Schools</li>
+                </ul>
+            </div>
+        </div>
+        <div id="textfooter">
+                <marquee direction="left">
+                    &#169; VISHNU KUMAR'S PORTFOLIO.ORG || ALL RIGHTS RESERVED PVT.LTD
+                                                                                    </marquee>
+        </div>
+    </footer>
+    <!-- CODE'S OF JAVASCRIPI **.JS** -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Welcome To Vishnu Kumars Portfolio', 'My Skills:', 'Professional Programmer', 'Graphic Designer', 'Ux And UI Developer/Designer', 
+                                        'Ethical Hacker At @ Microsoft', 'Sr.Software Developer Engineer', 
+                                    'Web Designer', '&', 'Professional Code Writer !!!'],
+        typeSpeed: 90,
+                });
+        </script>
+    </body>
+</html>
